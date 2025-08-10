@@ -32,6 +32,7 @@ logger = logging.get_logger(__name__)
 MODEL_MAPPING_NAMES = OrderedDict(
     [
         # Base model mapping
+        ("exaone4", "Exaone4Model"),
         ("albert", "AlbertModel"),
         ("align", "AlignModel"),
         ("altclip", "AltCLIPModel"),
@@ -373,6 +374,7 @@ MODEL_MAPPING_NAMES = OrderedDict(
 MODEL_FOR_PRETRAINING_MAPPING_NAMES = OrderedDict(
     [
         # Model for pre-training mapping
+        ("exaone4", "Exaone4ForPreTraining"),
         ("albert", "AlbertForPreTraining"),
         ("bart", "BartForConditionalGeneration"),
         ("bert", "BertForPreTraining"),
@@ -462,6 +464,7 @@ MODEL_FOR_PRETRAINING_MAPPING_NAMES = OrderedDict(
 MODEL_WITH_LM_HEAD_MAPPING_NAMES = OrderedDict(
     [
         # Model with LM heads mapping
+        ("exaone4", "Exaone4ForCausalLM"),
         ("albert", "AlbertForMaskedLM"),
         ("bart", "BartForConditionalGeneration"),
         ("bert", "BertForMaskedLM"),
@@ -551,6 +554,7 @@ MODEL_WITH_LM_HEAD_MAPPING_NAMES = OrderedDict(
 MODEL_FOR_CAUSAL_LM_MAPPING_NAMES = OrderedDict(
     [
         # Model for Causal LM mapping
+        ("exaone4", "Exaone4ForCausalLM"),
         ("arcee", "ArceeForCausalLM"),
         ("aria_text", "AriaTextForCausalLM"),
         ("bamba", "BambaForCausalLM"),
@@ -1085,6 +1089,7 @@ MODEL_FOR_SPEECH_SEQ_2_SEQ_MAPPING_NAMES = OrderedDict(
 MODEL_FOR_SEQUENCE_CLASSIFICATION_MAPPING_NAMES = OrderedDict(
     [
         # Model for Sequence Classification mapping
+        ("exone4", "Exaone4ForSequenceClassification"),
         ("albert", "AlbertForSequenceClassification"),
         ("arcee", "ArceeForSequenceClassification"),
         ("bart", "BartForSequenceClassification"),
@@ -1193,6 +1198,7 @@ MODEL_FOR_SEQUENCE_CLASSIFICATION_MAPPING_NAMES = OrderedDict(
 MODEL_FOR_QUESTION_ANSWERING_MAPPING_NAMES = OrderedDict(
     [
         # Model for Question Answering mapping
+        ("exone4", "Exaone4ForQuestionAnswering"),
         ("albert", "AlbertForQuestionAnswering"),
         ("arcee", "ArceeForQuestionAnswering"),
         ("bart", "BartForQuestionAnswering"),
@@ -1297,6 +1303,7 @@ MODEL_FOR_DOCUMENT_QUESTION_ANSWERING_MAPPING_NAMES = OrderedDict(
 MODEL_FOR_TOKEN_CLASSIFICATION_MAPPING_NAMES = OrderedDict(
     [
         # Model for Token Classification mapping
+        ("exone4", "Exaone4ForTokenClassification"),
         ("albert", "AlbertForTokenClassification"),
         ("arcee", "ArceeForTokenClassification"),
         ("bert", "BertForTokenClassification"),

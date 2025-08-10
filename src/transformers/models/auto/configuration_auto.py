@@ -36,6 +36,7 @@ _CallableT = TypeVar("_CallableT", bound=Callable[..., Any])
 CONFIG_MAPPING_NAMES = OrderedDict[str, str](
     [
         # Add configs here
+        ("exaone4", "Exaone4Config"),
         ("albert", "AlbertConfig"),
         ("align", "AlignConfig"),
         ("altclip", "AltCLIPConfig"),
@@ -404,6 +405,7 @@ CONFIG_MAPPING_NAMES = OrderedDict[str, str](
 MODEL_NAMES_MAPPING = OrderedDict[str, str](
     [
         # Add full (and cased) model names here
+        ("exaone4", "Exaone4Config"),
         ("albert", "ALBERT"),
         ("align", "ALIGN"),
         ("altclip", "AltCLIP"),
