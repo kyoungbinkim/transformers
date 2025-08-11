@@ -1180,6 +1180,7 @@ class AutoConfig:
         {'foo': False}
         ```"""
         use_auth_token = kwargs.pop("use_auth_token", None)
+        
         if use_auth_token is not None:
             warnings.warn(
                 "The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers. Please use `token` instead.",
@@ -1228,6 +1229,7 @@ class AutoConfig:
                     "that supports this model yet. In this case, you can get the most up-to-date code by installing "
                     "Transformers from source with the command "
                     "`pip install git+https://github.com/huggingface/transformers.git`"
+                    "{CONFIG_MAPPING_NAMES}"
                 )
             return config_class.from_dict(config_dict, **unused_kwargs)
         else:

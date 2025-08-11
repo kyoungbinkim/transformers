@@ -2007,17 +2007,17 @@ class GenerationMixin(ContinuousMixin):
         # b) convert to the new cache format (if the user passes a legacy cache and model supports it)
         user_defined_cache = model_kwargs.get(cache_name)
         if user_defined_cache is not None:
-            if generation_config.cache_implementation is not None:
-                raise ValueError(
-                    f"Passing both `cache_implementation` (used to initialize certain caches) and `{cache_name}` (a "
-                    "Cache object) is unsupported. Please use only one of the two."
-                )
-            if isinstance(user_defined_cache, tuple) and self._supports_default_dynamic_cache():
-                model_kwargs[cache_name] = (
-                    DynamicCache.from_legacy_cache(user_defined_cache)
-                    if not requires_cross_attention_cache
-                    else EncoderDecoderCache.from_legacy_cache(user_defined_cache)
-                )
+            # if generation_config.cache_implementation is not None:
+            #     raise ValueError(
+            #         f"Passing both `cache_implementation` (used to initialize certain caches) and `{cache_name}` (a "
+            #         "Cache object) is unsupported. Please use only one of the two."
+            #     )
+            # if isinstance(user_defined_cache, tuple) and self._supports_default_dynamic_cache():
+            #     model_kwargs[cache_name] = (
+            #         DynamicCache.from_legacy_cache(user_defined_cache)
+            #         if not requires_cross_attention_cache
+            #         else EncoderDecoderCache.from_legacy_cache(user_defined_cache)
+            #     )
             return
 
         # Quick escape route 2: if the user specifies no cache is to be used. (conflicting arguments are handled in
