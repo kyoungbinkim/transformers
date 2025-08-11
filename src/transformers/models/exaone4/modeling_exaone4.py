@@ -31,9 +31,6 @@ from ...generation import GenerationMixin
 from ...integrations import use_kernel_forward_from_hub
 from ...masking_utils import create_causal_mask, create_sliding_window_causal_mask
 from ...modeling_layers import (
-    GenericForQuestionAnswering,
-    GenericForSequenceClassification,
-    GenericForTokenClassification,
     GradientCheckpointingLayer,
 )
 from ...modeling_outputs import BaseModelOutputWithPast, CausalLMOutputWithPast
@@ -514,15 +511,15 @@ class Exaone4ForCausalLM(Exaone4PreTrainedModel, GenerationMixin):
         )
 
 
-class Exaone4ForSequenceClassification(GenericForSequenceClassification, Exaone4PreTrainedModel):
+class Exaone4ForSequenceClassification( Exaone4PreTrainedModel):
     pass
 
 
-class Exaone4ForTokenClassification(GenericForTokenClassification, Exaone4PreTrainedModel):
+class Exaone4ForTokenClassification( Exaone4PreTrainedModel):
     pass
 
 
-class Exaone4ForQuestionAnswering(GenericForQuestionAnswering, Exaone4PreTrainedModel):
+class Exaone4ForQuestionAnswering(Exaone4PreTrainedModel):
     base_model_prefix = "transformer"  # For BC, where `transformer` was used instead of `model`
 
 
